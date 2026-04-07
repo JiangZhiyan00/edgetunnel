@@ -1,4 +1,4 @@
-name: 'Upstream Sync'
+name: 'Fork Sync'
 
 on:
   schedule:
@@ -22,7 +22,7 @@ jobs:
           persist-credentials: false
 
       - name: Sync upstream changes
-        uses: aormsby/fork-sync-action@v3.4.3
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
           target_sync_branch: main
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
